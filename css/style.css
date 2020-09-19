@@ -1,0 +1,455 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  */
+* {
+  box-sizing: border-box;
+}
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+html,
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* common */
+h1,
+h2 {
+  margin: 10px;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p,
+li {
+  font-weight: 300;
+}
+
+/* custom */
+/* container */
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* social header */
+.social-header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f6f6f6;
+}
+
+/* social menu */
+.social-menu {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.social-menu li {
+  padding: 6px 8px;
+}
+
+.social-menu li a {
+  text-decoration: none;
+}
+
+.social-menu li:first-child a {
+  color: #4460a0;
+}
+
+.social-menu li:last-child a {
+  color: #00aaec;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo */
+.logo a {
+  display: block;
+  width: 170px;
+  height: 36px;
+  background-image: url('../images/logo.png');
+  margin-left: 21px;
+  /*  圖片取代文字 */
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* nav */
+.menu {
+  display: flex;
+  margin-right: 8px;
+}
+
+.menu li a {
+  display: block;
+  color: #00cc99;
+  padding: 18px 12px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  border-bottom: 3px solid #00cc99;
+}
+
+/* banner */
+.banner {
+  position: relative;
+  background: url('../images/banner.jpg');
+  /*  指定圖片大小  背景圖片放大至內容大小*/
+  background-size: cover;
+  /*  指定圖片位置  垂直居中 水平靠右*/
+  background-position: center right;
+  /*  背景圖片不重複  */
+  background-repeat: no-repeat;
+  /*  背景圖片固定  */
+  /*   background-attachment: fixed; */
+  height: 347px;
+  margin-bottom: 62px;
+}
+
+.mask {
+  position: absolute;
+  top: 95px;
+  left: 0;
+  width: 100%;
+  height: 163px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.mask h1 {
+  margin: 0;
+  padding: 41px 23px;
+  color: #fff;
+  font-size: 35px;
+  line-height: 1.2;
+}
+
+/* course */
+.course {
+  margin-bottom: 62px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.course-item {
+  width: 302px;
+  box-shadow: 0 1px 6px gray;
+}
+
+.course-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 170px;
+}
+
+.course-item h2 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.course-item p {
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  padding: 0 22px 24px 20px;
+}
+
+.course-item:last-child p {
+  padding-bottom: 0;
+}
+
+.course-item ul {
+  list-style-type: disc;
+  padding-left: 26px;
+}
+
+.course-item li {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+/* table */
+.compare-table {
+  margin-bottom: 62px;
+}
+
+.compare-table h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.mark {
+  color: #44bea0;
+}
+
+.compare {
+  width: 840px;
+  margin: 0 auto;
+}
+
+.compare th,
+.compare td {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  padding: 13px 23px;
+  font-size: 16px;
+}
+
+.compare th {
+  background: #f7f7f7;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* contact form */
+.contact-form {
+  background: linear-gradient(#00644b, #009771);
+  padding: 40px 0 30px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 33px;
+  line-height: 1.5;
+}
+
+.contact-form form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-column {
+  width: 461px;
+}
+
+.form-column textarea {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.form-row {
+  margin-bottom: 16px;
+}
+
+.form-row label {
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.form-row input {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* 按鈕列 */
+.form-row:last-child {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0;
+}
+
+.form-row .btn {
+  background: #00cc99;
+  color: #fff;
+  padding: 5px 21px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.contact-form input,
+.contact-form button,
+.contact-form textarea {
+  border: 0;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover,
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: #eeeeee;
+}
+
+.contact-form .btn:hover {
+  background: #03cf9c;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.footer-contact {
+  padding: 30px 15px;
+  font-size: 14px;
+}
+
+.footer-contact p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-contact span {
+  color: #e54991;
+}
